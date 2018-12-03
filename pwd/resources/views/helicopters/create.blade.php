@@ -36,19 +36,19 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Name:</strong>
-                <input type="text" name="name" class="form-control" placeholder="Name">
+                <textarea class="form-control"  name="name" placeholder="Name"></textarea>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-            <strong>Speed:</strong>
-                <input type="text" name="speed" class="form-control" placeholder="Speed">
+                <strong>Speed:</strong>
+                <textarea class="form-control"  name="speed" placeholder="Speed"></textarea>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-            <strong>Color:</strong>
-                <input type="text" name="color" class="form-control" placeholder="Color">
+                <strong>Color:</strong>
+                <textarea class="form-control"  name="color" placeholder="Color"></textarea>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
