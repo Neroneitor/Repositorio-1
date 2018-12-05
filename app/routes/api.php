@@ -18,4 +18,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 });
-Route::get('fac4', 'HelicopterController@getHelicopterAppApi');
+//Route::get('fac4', 'HelicopterController@getHelicopterAppApi');

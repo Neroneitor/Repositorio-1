@@ -17,4 +17,4 @@ Route::get('/', function () {
 
 Route::resource('products','ProductController');
 Route::resource('helicopters','HelicopterController');
-Route::pos('fac4', 'HelicopterController@getHelicopterAppApi');
+Route::get('fac4', 'HelicopterController@getHelicopterAppApi');

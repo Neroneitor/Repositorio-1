@@ -29,18 +29,17 @@
         </tr>
         @foreach ($helicopters as $helicopter) 
         <tr>
-            <td>{{ ++$i }}</td>
-            <td>{{ $helicopter->type }}</td>
-            <td>{{ $helicopter->name }}</td>
-            <td>{{ $helicopter->speed }}</td>
-            <td>{{ $helicopter->color }}</td>
+            <td>{{ $helicopter['type'] }}</td>
+            <td>{{ $helicopter['name'] }}</td>
+            <td>{{ $helicopter['speed'] }}</td>
+            <td>{{ $helicopter['color'] }}</td>
 
             <td>
-                <form action="{{ route('helicopters.destroy',$helicopter->id) }}" method="POST">
+                <form action="{{ route('helicopters.destroy',$helicopter['id']) }}" method="POST">
    
-                    <a class="btn btn-info" href="{{ route('helicopters.show',$helicopter->id) }}">Show</a>
+                    <a class="btn btn-info" href="{{ route('helicopters.show',$helicopter['id']) }}">Show</a>
     
-                    <a class="btn btn-primary" href="{{ route('helicopters.edit',$helicopter->id) }}">Edit</a>
+                    <a class="btn btn-primary" href="{{ route('helicopters.edit',$helicopter['id']) }}">Edit</a>
    
                     @csrf
                     @method('DELETE')
