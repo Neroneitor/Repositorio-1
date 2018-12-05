@@ -45,9 +45,9 @@
              <td>
                  <form action="{{ route('helicopters.destroy',$helicopter['id']) }}" method="POST">
     
-                     <a class="btn btn-info" href="{{ route('helicopters.show',$helicopter['id']) }}">Show</a>
+                     <a class="btn btn-info"   href="{{ route('helicopters.show',$helicopter['id']) }}">Show</a>
      
-                     <a class="btn btn-primary" href="{{ route('helicopters.edit',$helicopter['id']) }}">Edit</a>
+                     <a class="btn btn-primary"  href="{{ route('helicopters.edit',$helicopter['id']) }}">Edit</a>
     
                      @csrf
                      @method('DELETE')

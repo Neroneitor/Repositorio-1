@@ -24,7 +24,7 @@
            </div>
        @endif
      
-       <form action="{{ route('helicopters.update',$helicopter->id) }}" method="POST">
+       <form action="{{ route('helicopters.update',$helicopter['id']) }}" method="POST">
            @csrf
            @method('PUT')
       
@@ -32,25 +32,25 @@
                <div class="col-xs-12 col-sm-12 col-md-12">
                    <div class="form-group">
                        <strong>Type:</strong>
-                       <input type="text" name="type" value="{{ $helicopter->type }}" class="form-control" placeholder="Type">
+                       <input type="text" name="type" value="{{ $helicopter['type'] }}" class="form-control" placeholder="Type">
                    </div>
                </div>
                <div class="col-xs-12 col-sm-12 col-md-12">
                    <div class="form-group">
                        <strong>Name:</strong>
-                       <input type="text" name="name" value="{{ $helicopter->name }}" class="form-control" placeholder="Name">
+                       <input type="text" name="name" value="{{ $helicopter['name'] }}" class="form-control" placeholder="Name">
                    </div>
                </div>
                <div class="col-xs-12 col-sm-12 col-md-12">
                    <div class="form-group">
                        <strong>Speed:</strong>
-                       <input type="text" name="speed" value="{{ $helicopter->speed }}" class="form-control" placeholder="Speed">
+                       <input type="text" name="speed" value="{{ $helicopter['speed'] }}" class="form-control" placeholder="Speed">
                    </div>
                </div>
                <div class="col-xs-12 col-sm-12 col-md-12">
                    <div class="form-group">
                        <strong>Color:</strong>
-                       <input type="text" name="color" value="{{ $helicopter->color }}" class="form-control" placeholder="Color">
+                       <input type="text" name="color" value="{{ $helicopter['color'] }}" class="form-control" placeholder="Color">
                    </div>
                </div>
                <div class="col-xs-12 col-sm-12 col-md-12 text-center">

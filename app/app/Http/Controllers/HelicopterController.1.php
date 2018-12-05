@@ -62,35 +62,7 @@ class HelicopterController extends Controller
      */
     public function store(Request $request)
     {
-            $request->validate([
-                'name' => 'required',
-                'type' => 'required',
-                'speed' => 'required',
-                'color' => 'required',  
-            ]);
-
-            $client = new \GuzzleHttp\Client();
-            $url = "http://localhost:8000/api/helicopters";
-            $res = $client->request('POST',$url,  
-            ['headers' => [
-             'Authorization' => 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjgwNzdkODc2ZjQyNjRkZDZjYzkzZTUyZWNhMmI3YmMyMTBmMzQ1NjBkNDdhZWVmZGI1NDg0Y2U1Nzc3M2I2MWJmOGI5M2NjODhkMzNiMjZkIn0.eyJhdWQiOiIyIiwianRpIjoiODA3N2Q4NzZmNDI2NGRkNmNjOTNlNTJlY2EyYjdiYzIxMGYzNDU2MGQ0N2FlZWZkYjU0ODRjZTU3NzczYjYxYmY4YjkzY2M4OGQzM2IyNmQiLCJpYXQiOjE1NDM4NTUxMTAsIm5iZiI6MTU0Mzg1NTExMCwiZXhwIjoxNTc1MzkxMTA5LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.CrANY_mIeprQ4MiHURKlErLPCKHhsVYKtn8iAD5e4vzHJyEUKKsYIyBYVfFhVqxeYe9u2-iAieksq9lvHfNRSpOBWukC6jHu894ww715d9Buw96UTeAWphiQSdzhFwhr4OrQdWJ-0AHOXvgyc6ZNweZE3SAuiW3nd9z_AR3rB2HuVszny7k9qUxs5ssoY6mT-W9JvcIwijUCQKFfhysbla6imOTRmHuiAuxdpVy_J9vP-MbATg4Vcyjnlod3tF8lMkCBMizY8SQP68taRxHYRuzmsSvJL_cyxTI2MnBe2CvBPSHHGxGsE82vU7rFZ0a2k0FCbnfy6Jgwr1GLRTdz7IYaxXPD3xGFj8ennZ_mvF_lenGppB6-RKeCt47bQOH3DRxyiXIkcmvvC77paPzJO4_YetbehEABrxNNSv5XppR5m9syotlA2IsJSTVpwIgRRovvLpJ1hfxMtu7Ns_UG9GdErGTYL8QMHWmlvvLIfniz_6rmZanCfQDdikBlPvb5IvB_K_t9ffS0zudOebvRkI0pzAAGmSXh48gSAbzb8K5R-UWDKtooNqS6_MJNjUHzPvBGdN7HDUOFhujBEAN5kCx_ZgUVTo2_pBBIOgxoCPz3vf5wA8O7J9yjebmCF1yslzGrNGVwklQ484NBA2Kwy4riNahH-bVaT-6Jlj3fQUw',
-             'Accept'  => 'application/json']
-             'json'    => [
-                'name' => $request->name,
-                'type' => $request->type,
-                'speed' => $request->speed,
-                'color' => $request->color]
-             ]);
-
-     
-            return redirect()->route(‘productsAPI.index’)
-                             ->with(‘success’,‘Product created successfully.’);
-        
-        $request->validate([
-            'name' => 'required',
             
-        ]);
-  
         Helicopter::create($request->all());
    
         return redirect()->route('helicopters.index')
