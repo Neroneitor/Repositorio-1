@@ -95,6 +95,39 @@ class HelicopterController extends Controller
     public function show(Helicopter $helicopter)
     {
         return view('helicopters.show',compact('helicopter'));
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Helicopter  $helicopter
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Helicopter $helicopter)
+    {
+       // return view('helicopters.edit',compact('helicopter'));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Helicopter  $helicopter
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, Helicopter $helicopter)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Helicopter  $helicopter
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(Helicopter $helicopter)
+    {
         //
     }
 }
