@@ -27,30 +27,42 @@
             <th>Color</th>
             <th width="280px">Action</th>
         </tr>
+        <?php
+    //    echo "<pre>";
+    //    print_r($helicopters );
+    //     echo "</pre>";
+    //    exit;
+        ?>
+
+
         @foreach ($helicopters as $helicopter) 
         <tr>
-            <td>{{ $helicopter['type'] }}</td>
-            <td>{{ $helicopter['name'] }}</td>
-            <td>{{ $helicopter['speed'] }}</td>
-            <td>{{ $helicopter['color'] }}</td>
-
-            <td>
-                <form action="{{ route('helicopters.destroy',$helicopter['id']) }}" method="POST">
-   
-                    <a class="btn btn-info" href="{{ route('helicopters.show',$helicopter['id']) }}">Show</a>
+            <td>{{ $helicopter['id'] }}</td>
+             <td>{{ $helicopter['type'] }}</td>
+             <td>{{ $helicopter['name'] }}</td>
+             <td>{{ $helicopter['speed'] }}</td>
+             <td>{{ $helicopter['color'] }}</td>
+             <td>
+                 <form action="{{ route('helicopters.destroy',$helicopter['id']) }}" method="POST">
     
-                    <a class="btn btn-primary" href="{{ route('helicopters.edit',$helicopter['id']) }}">Edit</a>
-   
-                    @csrf
-                    @method('DELETE')
-      
-                    <button type="submit" class="btn btn-danger">Delete</button>
-                </form>
-            </td>
-        </tr>
-        @endforeach
+                     <a class="btn btn-info" href="{{ route('helicopters.show',$helicopter['id']) }}">Show</a>
+     
+                     <a class="btn btn-primary" href="{{ route('helicopters.edit',$helicopter['id']) }}">Edit</a>
+    
+                     @csrf
+                     @method('DELETE')
+       
+                     <button type="submit" class="btn btn-danger">Delete</button>
+                 </form>
+             </td>
+         </tr>
+         @endforeach
+
     </table>
   
-    {!! $helicopters->links() !!}
+
+
+
+
       
 @endsection
